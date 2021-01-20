@@ -6,13 +6,12 @@ public class App {
 
 	public static void main(String[] args) {
 
-		
 		Conta contaDaAna = new Conta();
 		Conta contaDoJoao = new Conta();
 		
 		contaDaAna.titular = "Ana Gomes";
 		contaDaAna.numero = "111-98";
-		contaDaAna.tipo = "Corrente";
+		contaDaAna.setTipo("Polpansa");
 		contaDaAna.ativa = true;
 		contaDaAna.chequeEspecial = 200;
 		contaDaAna.depositar(100);
@@ -29,17 +28,16 @@ public class App {
 		contaDaAna.mostrarSaldoDaConta();
 		contaDaAna.depositar(100);
 		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.getSaldo();
 		
-		int a = somar(10, 5);
+		double dobro = contaDaAna.getSaldo() * 2;
+		System.out.println(dobro);
 		
+		double a = contaDaAna.getSaldo();
+		System.out.println("****" + contaDaAna.getSaldo());
+		String teste = contaDaAna.getTitular();
 		
 		
 	}
 	
-	public static int somar(int valor1, int valor2) {
-		int resultado = valor1 + valor2;
-		return resultado;
-	}
 
 }
